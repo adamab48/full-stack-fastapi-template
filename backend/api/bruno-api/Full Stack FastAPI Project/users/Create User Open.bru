@@ -1,0 +1,19 @@
+meta {
+  name: Create User Open
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://elmenu.local/api/v1/users/open
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "",
+    "password": "",
+    "full_name": ""
+  }
+}

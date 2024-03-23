@@ -1,0 +1,21 @@
+meta {
+  name: Update User
+  type: http
+  seq: 8
+}
+
+patch {
+  url: http://elmenu.local/api/v1/users/{user_id}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "",
+    "is_active": "",
+    "is_superuser": "",
+    "full_name": "",
+    "password": ""
+  }
+}

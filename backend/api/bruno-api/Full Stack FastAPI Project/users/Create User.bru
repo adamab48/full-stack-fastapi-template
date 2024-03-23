@@ -1,0 +1,21 @@
+meta {
+  name: Create User
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://elmenu.local/api/v1/users/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "",
+    "is_active": "",
+    "is_superuser": "",
+    "full_name": "",
+    "password": ""
+  }
+}

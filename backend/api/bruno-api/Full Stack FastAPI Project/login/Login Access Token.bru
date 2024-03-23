@@ -1,0 +1,20 @@
+meta {
+  name: Login Access Token
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://elmenu.local/api/v1/login/access-token
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  grant_type: 
+  username: 
+  password: 
+  scope: 
+  client_id: 
+  client_secret: 
+}
