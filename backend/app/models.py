@@ -111,3 +111,36 @@ class TokenPayload(SQLModel):
 class NewPassword(SQLModel):
     token: str
     new_password: str
+
+
+class WaiterBase(SQLModel):
+    name: str
+    email: str
+    phone: str
+
+
+class WaiterCreate(WaiterBase):
+    password: str
+
+
+class WaiterOut(WaiterBase):
+    id: int
+    name: str
+    email: str
+
+
+class WaitersOut(SQLModel):
+    data: list[WaiterOut]
+    count: int
+
+
+class WaiterUpdate(WaiterBase):
+    name: str | None = None
+    email: str | None = None
+    phone: str | None = None
+
+
+class Waiter(WaiterBase, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    name: str
+    email: str

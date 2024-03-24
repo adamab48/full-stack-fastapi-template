@@ -1,0 +1,11 @@
+--2024-03-24 08:03:53--  http://elmenu.local/api/v1/openapi.json
+Resolving elmenu.local (elmenu.local)... 127.0.0.1
+Connecting to elmenu.local (elmenu.local)|127.0.0.1|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 19205 (19K) [application/json]
+Saving to: ‘openapi.json.1’
+
+     0K .......... ........                                   100%  473M=0s
+
+2024-03-24 08:03:53 (473 MB/s) - ‘openapi.json.1’ saved [19205/19205]
+

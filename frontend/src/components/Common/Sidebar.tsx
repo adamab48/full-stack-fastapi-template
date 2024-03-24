@@ -11,28 +11,28 @@ import {
   Text,
   useColorModeValue,
   useDisclosure,
-} from "@chakra-ui/react"
-import type React from "react"
-import { FiLogOut, FiMenu } from "react-icons/fi"
-import { useQueryClient } from "react-query"
+} from "@chakra-ui/react";
+import type React from "react";
+import { FiLogOut, FiMenu } from "react-icons/fi";
+import { useQueryClient } from "react-query";
 
-import Logo from "../../assets/images/fastapi-logo.svg"
-import type { UserOut } from "../../client"
-import useAuth from "../../hooks/useAuth"
-import SidebarItems from "./SidebarItems"
+import Logo from "../../assets/images/elmenu-logo-l.svg";
+import type { UserOut } from "../../client";
+import useAuth from "../../hooks/useAuth";
+import SidebarItems from "./SidebarItems";
 
 const Sidebar: React.FC = () => {
-  const queryClient = useQueryClient()
-  const bgColor = useColorModeValue("ui.white", "ui.dark")
-  const textColor = useColorModeValue("ui.dark", "ui.white")
-  const secBgColor = useColorModeValue("ui.secondary", "ui.darkSlate")
-  const currentUser = queryClient.getQueryData<UserOut>("currentUser")
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const { logout } = useAuth()
+  const queryClient = useQueryClient();
+  const bgColor = useColorModeValue("ui.white", "ui.dark");
+  const textColor = useColorModeValue("ui.dark", "ui.white");
+  const secBgColor = useColorModeValue("ui.secondary", "ui.darkSlate");
+  const currentUser = queryClient.getQueryData<UserOut>("currentUser");
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { logout } = useAuth();
 
   const handleLogout = async () => {
-    logout()
-  }
+    logout();
+  };
 
   return (
     <>
@@ -111,7 +111,7 @@ const Sidebar: React.FC = () => {
         </Flex>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
